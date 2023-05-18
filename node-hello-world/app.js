@@ -1,8 +1,11 @@
 var express = require('express');
+const os = require('os');
 var app = express();
 
+
+
 app.get('/', function (req, res) {
-  res.send('Hello World from Node v3!');
+  res.send('Hello World from Node v3!<br/> from Hostname:' + os.hostname());
 });
 
 const PORT = parseInt(process.env.PORT) || 8080;
