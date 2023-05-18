@@ -1,6 +1,16 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/${PROJECT_ID}/docker-hello-world/gcp-ci-cd-demo', '.']
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/docker-hello-world/gcp-ci-cd-demo:$REVISION_ID', '.']
+  dir: 'node-hello-world'
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/${PROJECT_ID}/docker-hello-world/gcp-ci-cd-demo']
-images: ['us-central1-docker.pkg.dev/${PROJECT_ID}/docker-hello-world/gcp-ci-cd-demo']
+  args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/docker-hello-world/gcp-ci-cd-demo:$REVISION_ID']
+images: ['us-central1-docker.pkg.dev/$PROJECT_ID/docker-hello-world/gcp-ci-cd-demo:$REVISION_ID']
+
+#- name: 'gcr.io/cloud-builders/gke-deploy:stable'
+#  args:
+#  - 'run'
+#  - '--filename=k8s-manifests/demo-k8s-configmap-as-file-deployment.yaml'
+#  - '--image=gcr.io/$PROJECT_ID/demo-k8s-configmap-as-file:$REVISION_ID'
+#  - '--location=us-central1-a'
+#  - '--cluster=niran-poc-cluster'
+#  - '--namespace=ns-niran-poc'
