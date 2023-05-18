@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World from Node!');
+  res.send('Hello World from Node v2!');
 });
 
 const PORT = parseInt(process.env.PORT) || 8080;
