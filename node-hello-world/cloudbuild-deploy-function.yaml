@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - node-hello-world
+  - --region=us-central1
+  - --source=./node-hello-world/
+  - --trigger-http
+  - --runtime=node
