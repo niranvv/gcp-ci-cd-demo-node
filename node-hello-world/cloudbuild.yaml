@@ -9,7 +9,11 @@ steps:
 # Deploy container image to Cloud Run
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run', 'deploy', 'node-hello-world', '--image', 'us-central1-docker.pkg.dev/$PROJECT_ID/docker-hello-world/gcp-ci-cd-demo:$REVISION_ID', '--region', 'us-central1']
+  args: ['run', 'deploy', 'node-hello-world', 
+        '--image', 'us-central1-docker.pkg.dev/$PROJECT_ID/docker-hello-world/gcp-ci-cd-demo:$REVISION_ID', 
+        '--region', 'us-central1',
+        "--allow-unauthenticated"
+        ]
 images: ['us-central1-docker.pkg.dev/$PROJECT_ID/docker-hello-world/gcp-ci-cd-demo:$REVISION_ID']
 
 #- name: 'gcr.io/cloud-builders/gke-deploy:stable'
