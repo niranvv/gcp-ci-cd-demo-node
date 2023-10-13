@@ -10,5 +10,4 @@ steps:
   - --trigger-http
   - --allow-unauthenticated
   - --gen2
-  - --docker-registry=artifact-registry
   - --runtime=nodejs18
