@@ -6,6 +6,6 @@ steps:
   - deploy
   - hello-node-function
   - --region=us-west2
-  - --source=./hello-node-function/
+  - --source=./node-hello-function/
   - --trigger-http
   - --runtime=nodejs18
