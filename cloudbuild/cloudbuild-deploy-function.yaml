@@ -4,8 +4,8 @@ steps:
   - gcloud
   - functions
   - deploy
-  - hello-world
-  - --region=us-central1
-  - --source=./node-hello-world/
+  - hello-node-function
+  - --region=us-west2
+  - --source=./hello-node-function/
   - --trigger-http
   - --runtime=nodejs18
