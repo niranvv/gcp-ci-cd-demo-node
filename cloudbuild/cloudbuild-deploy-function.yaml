@@ -4,7 +4,7 @@ steps:
   - gcloud
   - functions
   - deploy
-  - hello-node-function
+  - helloGET
   - --region=us-west2
   - --source=./node-hello-function/
   - --trigger-http
