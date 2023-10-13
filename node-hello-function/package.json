@@ -1,26 +1,6 @@
 {
-    "name": "node-hello-function",
-    "version": "0.0.1",
-    "private": true,
-    "license": "Apache-2.0",
-    "author": "Niran Vijayakumar",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/niranvv/gcp-ci-cd-demo-node.git"
-    },
-    "engines": {
-        "node": ">=16.0.0"
-    },
-    "scripts": {
-        "test": "c8 mocha -p -j 2 test/*.test.js --timeout=6000 --exit"
-    },
     "dependencies": {
-        "@google-cloud/functions-framework": "^3.3.0"
-    },
-    "devDependencies": {
-        "c8": "^8.0.0",
-        "gaxios": "^6.0.0",
-        "mocha": "^10.0.0",
-        "wait-port": "^1.0.4"
+      "@google-cloud/functions-framework": "^3.0.0"
     }
-}
+  }
+  
